@@ -58,11 +58,11 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver android:exported="true" android:label="@string/app_name" 						android:name="com.cowbell.cordova.geofence.ReceiveTransitionsReceiver" />
+            <receiver android:exported="true" android:label="@string/app_name" android:name="com.cowbell.cordova.geofence.ReceiveTransitionsReceiver" />
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver android:name="com.cowbell.cordova.geofence.BootReceiver">
+            <receiver android:exported="false" android:name="com.cowbell.cordova.geofence.BootReceiver">
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                 </intent-filter>
